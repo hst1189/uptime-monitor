@@ -106,7 +106,7 @@ ${config.summaryEndHtmlComment || "<!--end: status pages-->"}${endText}`;
         const docsStartText = readmeContent.split("<!--start: docs-->")[0];
         const docsEndText = readmeContent.split("<!--end: docs-->")[1];
         if (readmeContent.includes("<!--start: docs-->"))
-            readmeContent = `${docsStartText}[**Visit our status website →**](${website})${docsEndText}`;
+            readmeContent = ``;
         // Remove Koj logo
         const logoStartText = readmeContent.split("<!--start: logo-->")[0];
         const logoEndText = readmeContent.split("<!--end: logo-->")[1];
@@ -126,7 +126,7 @@ ${config.summaryEndHtmlComment || "<!--end: status pages-->"}${endText}`;
             const descriptionStartText = readmeContent.split("<!--start: description-->")[0];
             const descriptionEndText = readmeContent.split("<!--end: description-->")[1];
             if (readmeContent.includes("<!--start: description-->"))
-                readmeContent = `${descriptionStartText}This repository contains the open-source uptime monitor and status page for ${name}, powered by [Upptime](https://github.com/upptime/upptime).${descriptionEndText}`;
+                readmeContent = `${descriptionStartText}This repository contains the open-source uptime monitor and status page | powered by [Upptime](https://github.com/upptime/upptime).${descriptionEndText}`;
             // Change copyright
             readmeContent = readmeContent.replace("[MIT](./LICENSE) © [Koj](https://koj.co)", `[MIT](./LICENSE) © ${name}`);
             // Add powered by Upptime
